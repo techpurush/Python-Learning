@@ -1,11 +1,12 @@
-a=5
-b=0
-
+import traceback
 try:
-    print("Open")
-    c=a/b
-    print(c)
+    a = 5
+    b = 10
+    c = a / b
+    print("c: ",c)
 except Exception as e:
-    print("Error: ",e)
+    print("Exception details\n\n: ", traceback.format_exc())
+else:
+    print("-- No Exception --")
 finally:
-    print("Closed")
+    print("-- Finally --")
